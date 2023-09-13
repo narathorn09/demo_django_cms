@@ -63,6 +63,14 @@ INSTALLED_APPS = [
     'meta',
     'sortedm2m',
     'djangocms_blog',
+    'django.contrib.humanize',  # Required for elapsed time formatting
+    'bootstrap4form', # Required for nicer formatting of forms with the default templates
+    'account',  # Required by pinax-teams
+    'pinax.invitations',  # Required by pinax-teams
+    'pinax.teams',  # Team support
+    'reversion',  # Required by pinax-teams
+    'rest_framework',  # required for the API
+    'helpdesk',  # This is us!
 ]
 
 THUMBNAIL_HIGH_RESOLUTION = True
@@ -185,3 +193,5 @@ DEBUG = True
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = '/helpdesk/login/'

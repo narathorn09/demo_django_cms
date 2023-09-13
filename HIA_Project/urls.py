@@ -22,6 +22,8 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     # re_path(r'^admin/', admin.site.urls),
+    path('helpdesk/', include('helpdesk.urls')),
     re_path(r'^', include('cms.urls')),
     url(r'^taggit_autosuggest/', include('taggit_autosuggest.urls')),
+    path('', include('helpdesk.urls', namespace='helpdesk')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

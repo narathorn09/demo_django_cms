@@ -56,6 +56,13 @@ INSTALLED_APPS = [
     'djangocms_googlemap',
     'djangocms_snippet',
     'djangocms_style',
+    'aldryn_apphooks_config',
+    'parler',
+    'taggit',
+    'taggit_autosuggest',
+    'meta',
+    'sortedm2m',
+    'djangocms_blog',
 ]
 
 THUMBNAIL_HIGH_RESOLUTION = True
@@ -66,6 +73,9 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters'
 )
+
+META_SITE_PROTOCOL = 'http'  # set 'http' for non ssl enabled websites
+META_USE_SITES = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
